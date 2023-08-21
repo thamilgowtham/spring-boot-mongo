@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydeploy
+  name: mongodeploy
   namespace: dev
   labels:
     app: web
@@ -15,7 +15,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: mynewcon
+      - name: mongocon
         image: westuser/spring-boot-mongo:latest
         ports:
         - containerPort: 8080
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myservice
+  name: mongoservice
   namespace: dev
 spec:
   selector:
