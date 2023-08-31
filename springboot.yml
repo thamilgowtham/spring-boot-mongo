@@ -11,6 +11,8 @@ spec:
       labels:
         name: springboot
     spec:
+      imagePullSecrets:
+      - name: dockerreposecret
       containers:
       - image: 35.92.208.60:8081/repository/docker-repo/spring-boot-mongo
         name: springboot
