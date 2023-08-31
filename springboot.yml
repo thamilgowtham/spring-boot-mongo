@@ -12,7 +12,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: 35.92.208.60:8083/spring-boot-mongo
+      - image: 35.92.208.60:8081/repository/docker-repo/spring-boot-mongo
         name: springboot
         ports:
         - name: springboot
