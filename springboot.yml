@@ -11,8 +11,6 @@ spec:
       labels:
         name: springboot
     spec:
-      imagePullSecrets:
-      - name: dockerreposecret
       containers:
       - image: westuser/spring-boot-mongo
         name: springboot
@@ -77,4 +75,4 @@ spec:
     - port: 27017
       targetPort: 27017
   selector:
-    name: mongo
+    name: mongo 
