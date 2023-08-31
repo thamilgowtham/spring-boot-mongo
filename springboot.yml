@@ -14,10 +14,8 @@ spec:
       imagePullSecrets:
       - name: dockerreposecret
       restartPolicy: Always
-      serviceAccountName: default
       containers:
       - image: 35.92.208.60:8081/repository/docker-repo/spring-boot-mongo:latest
-        imagePullPolicy: "Always"
         name: springboot
         ports:
         - name: springboot
