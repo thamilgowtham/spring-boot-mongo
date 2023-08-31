@@ -12,7 +12,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: westuser/spring-boot-mongo
+      - image: 35.92.208.60:8083/spring-boot-mongo
         name: springboot
         ports:
         - name: springboot
