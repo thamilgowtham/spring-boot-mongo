@@ -28,10 +28,10 @@ pipeline{
            script{
             withCredentials([string(credentialsId: 'nexus-credentials', variable: 'nexus_cred')]){
              sh '''
-             docker build -t 35.92.208.60:8083/spring-boot-app .
+             docker build -t 35.92.208.60:8083/spring-boot-mongo .
              docker login -u admin -p ${nexus_cred} 35.92.208.60:8083
-             docker push 35.92.208.60:8083/spring-boot-app
-             docker rmi 35.92.208.60:8083/spring-boot-app
+             docker push 35.92.208.60:8083/spring-boot-mongo
+             docker rmi 35.92.208.60:8083/spring-boot-mongo
              '''
                  }
                }
