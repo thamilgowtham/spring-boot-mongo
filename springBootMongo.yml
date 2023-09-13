@@ -1,7 +1,6 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  namespace: dev
   name: springappconfigmap
 data:
   username: springapp
@@ -11,7 +10,6 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  namespace: dev
   name: springappsecrets
 type: Opaque
 stringData:   # We can define multiple key value pairs.
@@ -21,7 +19,6 @@ stringData:   # We can define multiple key value pairs.
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  namespace: dev
   name: pv-hostpath
 spec:
   storageClassName: manual
@@ -35,7 +32,6 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  namespace: dev
   name: pvc-hostpath
 spec:
   storageClassName: manual
@@ -50,7 +46,6 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: dev
   name: springappdeployment
 spec:
   replicas: 1
@@ -85,7 +80,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: dev
   name: springapp
 spec:
   selector:
@@ -99,7 +93,6 @@ spec:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  namespace: dev
   name: mongodbrs
 spec:
   selector:
@@ -138,7 +131,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: dev
   name: mongo
 spec:
   type: ClusterIP
